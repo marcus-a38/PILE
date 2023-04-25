@@ -1,23 +1,45 @@
 # P . I . L . E - Python Interpretive Lexical Evaluator
 
 Operates very similar to the Python interpreter (built in Python!) but with simple, powerful customization in the palm of your hands. Tailor your microlanguage to your desired settings, and watch as your personal interpreter provides the desired results, with minimized overhead.
-___
 
-Table of Contents:
+<span>________________________________</span>
 
-1. [Configuration](#configuration)
-2. [Lexing and Tokenization](#lexing-and-tokenization)
-3. [Parsing and AST Generation](#parsing-and-ast-generation)
-4. [Compilation](#compilation)
-5. [Interpreting](#interpreting)
+### Table of Contents:
 
-___
+1. [**Configuration**](#configuration)
+2. [**Lexing and Tokenization**](#lexing-and-tokenization)
+3. [**Parsing and AST Generation**](#parsing-and-ast-generation)
+4. [**Compilation**](#compilation)
+5. [**Interpreting**](#interpreting)
+
+<span>________________________________</span>
 
 ## Configuration
 
-### Pile Config Syntax
+### General Information
+
+To configure your executable interpreter, you will need to fill out the settings at the top of the configuration file. Here's a list of the settings you can play around with (optional settings are italicized):
+
+1. **auto-compile** (*boolean*) -->  when you start the interpreter generator, should the interpreter automatically compile into an executable?
+4. **use-identation-levels** (*boolean*) --> should the interpreter consider indentation levels in your language's syntax?
+5. **allow-one-liners** (*boolean*) --> should the interpreter allow one-line statements and loops?
+6. **lang-name** (*string*) --> your microlanguage's name.
+7. ***extension*** (*char[3]*) --> give your microlanguage a unique extension? if you provide one, the generator will automatically register the extension on your OS.
+8. ***external-file*** (*string*) -->  a full system path to a Python or CPython file containing custom function definitions, operator behaviors, and more.
+9. ***lang-preset*** (*string*) --> automatically lex and parse based on a preset for an existing programming language?
+
+<span>______</span>
+
+
+**Footnote:** Any optional settings that you want to opt out of- such as using a language preset or creating + registering an extension- should be left blank. You can leave either no characters, or any number of whitespace characters as a blank entry.
+
+<span>______</span>
+
+### Pile Form
 
 P.I.L.E GUI and P.I.L.E Terminal utilize configuration files or streams to define the syntax and structure of your microlanguage. These configuration inputs follow a P.I.L.E specific metalanguage (simply referred to as Pile, or Pile Form to avoid confusion.) Below is a complete glossary and documentation of Pile Form syntax:
+
+<span>______</span>
 
 ### Do's and Dont's
 
